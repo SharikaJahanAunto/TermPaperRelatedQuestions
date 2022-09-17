@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sandwiches</title>
+</head>
+
+<body>
+    <h1>Sandwiches Output</h1>
+    <form>
+        <label>Enter number of breads</label>
+        <input id="bread" type="number" />
+        <br>
+        <label>Enter number of cheese</label>
+        <input id="cheese" type="number" />
+        <br>
+        <input type="button" onclick="calculate()" value="calculate" /><br>
+    </form>
+    <p>Sandwiches can be made:<span name="result" id="result"></span></p>
+    <script>
+        function calculate() {
+            var a = document.getElementById("bread").value;
+            var b = document.getElementById("cheese").value;
+            var c = parseInt(a) / 2;
+            if (b < parseInt(c)) {
+                var d = parseInt(b);
+            }
+            else {
+                var d = parseInt(c);
+            }
+            document.getElementById("result").innerHTML = d;
+        } 
+    </script>
+    <p>© Sharika Jahan Aunto.</p>
+</body>
+
+</html>

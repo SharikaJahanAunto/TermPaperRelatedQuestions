@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Color</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        flex-direction: column;
+        background-color: rgb(188, 214, 154);
+    }
+
+    button {
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #640505, #dfa58a, #dae28c);
+        color: aliceblue;
+        border-radius: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <button onclick="inRainbow()">Show Rainbow Colors</button>
+    <p id="rainbow"></p>
+    <script>
+        const rainbowColor = ['Red,', 'orange,', 'yellow,', 'green,', 'blue,', 'indigo,', 'violet.'];
+        const inRainbow = () => {
+            let text = 'The colors of the rainbow are: '
+            for (let x of rainbowColor) {
+                text += x + ' ';
+            }
+            document.getElementById('rainbow').innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

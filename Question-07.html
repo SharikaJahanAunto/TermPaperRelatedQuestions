@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Days</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        let today = new Date();
+        let durgapujaday = today.getFullYear();
+
+
+        if (today.getMonth() == 9 &&
+            today.getDate() > 01) {
+            durgapujaday = durgapujaday + 1;
+        }
+
+
+        let durgapujaDate =
+            new Date(durgapujaday, 9, 01);
+
+        let dayMilliseconds =
+            1000 * 60 * 60 * 24;
+
+        let remainingDays = Math.ceil(
+            (durgapujaDate.getTime() - today.getTime()) /
+            (dayMilliseconds)
+        );
+
+        document.write(" Hi Aunto! There are " + remainingDays + " days left of next Durga puja.");
+    </script>
+</body>

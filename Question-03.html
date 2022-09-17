@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings Message</title>
+</head>
+<style>
+    body{
+        background-color: green;
+    }
+</style>
+<body>
+    <div id="greetings"></div>
+    
+    <script>
+        const time = new Date().getHours();
+        let greetings;
+        if(time < 12){
+            greeting = "Good Morning";
+        }
+        else if(time < 18){
+            greeting = "Good Afternoon";
+        }
+        else{
+            greeting = "Good Night";
+        }
+        document.getElementById("greetings").innerHTML = 'Hello Aunto ' + '"' + greeting + '"';
+    </script>
+</body>
+</html>

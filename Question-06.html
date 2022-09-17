@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Link</title>
+</head>
+<style>
+    body {
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        margin: 100px;
+        background: green;
+        color: rgb(241, 236, 236);
+        font-weight: 700;
+        font-size: 30px;
+        border-radius: 20px;
+        display: block;
+    }
+</style>
+
+<body>
+    <button class="btn">Click Here</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let newUrl = 'https://code.jquery.com/jquery-3.5.1.min.js'
+        $("button").click(function () {
+            $("body").append("<a> Hyper link </a>")
+            $("a").attr("href", newUrl);
+        });
+    </script>
+</body>
+
+</html>
